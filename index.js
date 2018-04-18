@@ -1,20 +1,18 @@
 
 const express = require('express')
 const path = require('path')
-const PORT = process.env.PORT || 5000
-
 const app = express();
-
-
-const  socketIOServer = require("http").Server(app);
-const   io = require("socket.io")(socketIOServer);
-
+const  server = require("http").createServer(app);
+const io = require('socket.io')(server);
+const PORT = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, 'public')))
-    .set('views', path.join(__dirname, 'views'))
-    .set('view engine', 'ejs')
-    .get('/', (req, res) => res.render('pages/index'))
-    .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
+app.get('/', (req, res) =>
+    res.sendFile(__dirname +'/index.html'));
+
+
+server.listen(PORT);
 
 
 let messages = [];
@@ -102,4 +100,3 @@ io.on('connection', function(socket){
 
 });
 
-socketIOServer.listen(8081);

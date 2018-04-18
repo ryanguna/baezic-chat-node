@@ -2,16 +2,14 @@
   "name": "baesic-usapans",
   "version": "1.0.0",
   "description": "realtime chat",
-  "main": "index.js",
   "engines": {
     "node": "8.9.1"
   },
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "node test.js"
   },
-  "author": "Ryan Gunawardana",
-  "license": "MIT",
   "dependencies": {
     "ejs": "^2.5.8",
     "express": "^4.16.3",
@@ -21,9 +19,14 @@
     "request": "^2.81.0",
     "tape": "^4.7.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
   "keywords": [
     "node",
     "heroku",
     "express"
-  ]
+  ],
+  "license": "MIT"
 }
