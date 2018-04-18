@@ -3,13 +3,27 @@
   "version": "1.0.0",
   "description": "realtime chat",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "author": "Ryan Gunawardana",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "ejs": "^2.5.8",
     "express": "^4.16.3",
     "socket.io": "^2.1.0"
-  }
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
 }
