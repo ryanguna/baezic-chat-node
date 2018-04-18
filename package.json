@@ -1,0 +1,15 @@
+{
+  "name": "baesic-usapans",
+  "version": "1.0.0",
+  "description": "realtime chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Gunawardana",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
+}
